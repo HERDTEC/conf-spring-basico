@@ -1,8 +1,11 @@
 package com.next.pibelnext;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Administrator {
 	private int idAdministrator;
 	private String name;
+	@Autowired
 	private Adress adress;
 	
 	public Administrator(int idAdministrator, String name) {

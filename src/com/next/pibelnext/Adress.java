@@ -1,11 +1,16 @@
 package com.next.pibelnext;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Adress {
 	private String road;
 	private String zip;
 	
 	public Adress() {
-		super();
+		
 	}
 
 	public Adress(String road, String zip) {
@@ -16,6 +21,14 @@ public class Adress {
 	@Override
 	public String toString() {
 		return "Adress [road=" + road + ", zip=" + zip + "]";
+	}
+	@Autowired
+	public void setRoad(@Value("road")String road) {
+		this.road = road;
+	}
+	@Autowired
+	public void setZip(@Value("99999")String zip) {
+		this.zip = zip;
 	}
 	
 	
