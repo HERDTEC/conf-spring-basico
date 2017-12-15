@@ -6,6 +6,11 @@
 	<bean id="admin" class="com.next.pibelnext.Administrator">
 		<property name="idAdministrator" value="7777"></property>
 		<property name="name" value="super"></property>
+		<property name="adress" ref="adress"></property>
 	</bean>
 
+	<bean name="adress" class="com.next.pibelnext.Adress">
+		<constructor-arg name="road" value="road"></constructor-arg>
+		<constructor-arg name="zip" value="1212"></constructor-arg>
+	</bean>
 </beans>

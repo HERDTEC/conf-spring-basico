@@ -3,6 +3,7 @@ package com.next.pibelnext;
 public class Administrator {
 	private int idAdministrator;
 	private String name;
+	private Adress adress;
 	
 	public Administrator(int idAdministrator, String name) {
 		this.idAdministrator = idAdministrator;
@@ -16,11 +17,16 @@ public class Administrator {
 	public void printDirection() {
 		 System.out.println("Encino 1000");
 	}
+
+
 	@Override
 	public String toString() {
-		return "Administrator [idAdministrator=" + idAdministrator + ", name=" + name + "]";
+		return "Administrator [idAdministrator=" + idAdministrator + ", name=" + name + ", adress=" + adress + "]";
 	}
 
+	public void setAdress(Adress adress) {
+		this.adress = adress;
+	}
 
 	public void setIdAdministrator(int idAdministrator) {
 		this.idAdministrator = idAdministrator;
