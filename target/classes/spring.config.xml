@@ -4,8 +4,6 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="admin" class="com.next.pibelnext.Administrator">
-		<constructor-arg name="idAdministrator" value="77" type="int"></constructor-arg>
-		<constructor-arg name="name" value="root" type="String"></constructor-arg>
 		<property name="idAdministrator" value="7777"></property>
 		<property name="name" value="super"></property>
 	</bean>
