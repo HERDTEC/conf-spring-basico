@@ -2,6 +2,7 @@ package com.next.pibelnext;
 
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,10 +21,24 @@ public class MainApp {
 		admin.setName("paul");
 		admin.setWorkRole("root");
 		admin.setCreationDate(ts);
+		
+		 
 			
 		
 		try {
 			adminDao.save(admin);
+			admin.setIdAdministrator(1);
+			admin.setName("pedro");
+			adminDao.update(admin);
+			adminDao.delete(2);
+			List<Administrator> admins= adminDao.findAll(); 
+			for(Administrator adm : admins) {
+				System.out.println(adm);
+			}
+			System.out.println("Otras funciones de busqueda:");
+			System.out.println(adminDao.findById(1));
+			System.out.println(adminDao.findByName("paul").toString());
+			
 		} catch (CannotGetJdbcConnectionException e) {
 			e.printStackTrace();
 		} catch (DataAccessException e) {
